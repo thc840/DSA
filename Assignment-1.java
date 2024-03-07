@@ -1,7 +1,7 @@
 import java.util.*
 
 
-public class Assignment1.java{
+public class Assignment-1.java{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Long> telephone;
