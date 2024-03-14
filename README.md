@@ -1,6 +1,6 @@
 # Data Structures and Algorithms Laboratory
-_Program Codes from Data Structures and Algorithms from SPPU university practicals, at MCOERC, Nashik
-_
+Program Codes from Data Structures and Algorithms from SPPU university practicals, at MCOERC, Nashik
+
 ---
 ### Contents[^1]:
 >1. `.py` : Hashing Table Implementation.
