@@ -1,6 +1,6 @@
 # Assignment : 1
 > Language : Python
-- Consider a Python bookk database of 'N' Clients make use of hashtable implementations to quickly lookup client's telephone number.
+- Consider a Python book database of 'N' Clients make use of hashtable implementations to quickly lookup client's telephone number.
 - Make use of TWO collision resolution techniques and compare them using number of comparisons required to find a set of telephone number.
 ---
 # Assignment : 2
