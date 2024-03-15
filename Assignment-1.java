@@ -1,39 +1,39 @@
-import java.util.*
+import java.util.*;
 
 
 public class Assignment-1.java{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<Long> telephone;
+        List<Long> tele;
         long[] list;
-        System.out.println("(A)dd list number(delimited by comma");
-        telephone=addElement();
-        System.out.println("Enter the type of Hashing you would like to perform");
+        System.out.println("(A)dd list number (multiple separated by comma ,)");
+        tele=addElement();
+        System.out.println(" Select hashing type to store data");
         System.out.println("(W)ithout Replacement");
         System.out.println("(R)eplacement");
         System.out.println("(Q)uadratic");
         var choice1 = scanner.next();
-            list = Hashing(choice1.toUpperCase().charAt(0),telephone);
-
-        System.out.println("(S)earch number");
-        System.out.println("(P)rint");
-        //long[] list;
-        while(true) {
+            list = Hashing(choice1.toUpperCase().charAt(0),tele);
+        
+        do {
+            System.out.println("(S)earch number");
+            System.out.println("(P)rint");
             System.out.println("Enter choice");
             var choice = scanner.next().toUpperCase();
             int switchChoice = "SPQ".indexOf(choice.charAt(0));
             switch (switchChoice+2){
                 case 2->{
-                    System.out.println("Enter Number to be searched");
+                    System.out.print("Enter Number to search: ");
                     long num = Long.parseLong(scanner.next());
-                    boolean flag = false;
+                    boolean status = false;
                     for(var ele:list){
                         if(ele==num){
-                            System.out.println("Found");
-                            flag=true;
+                            System.out.println(ele+" Found");
+                            status=true;
+                            break;
                         }
                     }
-                    if(!flag){
+                    if(!status){
                         System.out.println("Not Found");
                     }
                 }
@@ -44,24 +44,24 @@ public class Assignment-1.java{
                     return;
                 }
             }
-            //return;
-        }
+            
+        }while(1);
     }
 
     public static List<Long> addElement(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the list of telephone number");
+        System.out.print("Enter the list of telephone number: ");
         List<String> listTele = new ArrayList<>(List.of(scanner.next().split(",")));
         List<Long> list = new ArrayList<>();
         listTele.forEach(s->list.add(Long.parseLong(s)));
         return list;
     }
-    public static long[] Hashing(char choice,List<Long> a){
+    public static long[] Hashing(char choice, List<Long> a){
         return switch (choice){
             case 'W'->without(a);
             case 'R'->replacement(a);
             case 'Q'->quadratic(a);
-            default -> throw new IllegalStateException("Unexpected value: " + choice);
+            default -> System.out.println("Unexpected value: " + choice);
         };
     }
 
