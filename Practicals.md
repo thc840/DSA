@@ -50,9 +50,9 @@
 
 > Language : JAVA
 
-- Construct an Expression Tree from given Prefix expression 
-    - Traverse it using post order traversal
-    - Delete the entire tree.
+- Construct an Expression Tree from given Prefix expression.
+  - Traverse it using post order traversal.
+  - Delete the entire tree.
 
 ---
 
@@ -60,12 +60,12 @@
 
 > Language : JAVA
 
-- Represent a given graph using adjacency matrix 
-    - To perform DFS and using adjacency list to perform BFS.
-    - Use the map of area around college as graph.
-    - Identify prominent landmark as nodes 
-        - Perform DFS on that graph.
-        - Perform BFS on that graph.
+- Represent a given graph using adjacency matrix.
+  - To perform DFS and using adjacency list to perform BFS.
+  - Use the map of area around college as graph.
+  - Identify prominent landmark as nodes.
+  - Perform DFS on that graph.
+  - Perform BFS on that graph.
 
 ---
 
@@ -74,8 +74,8 @@
 > Language : JAVA
 
 - You have business with several offices, you want to least phone line to connect up each other and phone company charges different amount of money to connect different pair of cities.
-    - You want set of lines that connects all your offices with minimum cost. 
-    - Solve problem by suggesting appropriate data structures.
+  - You want set of lines that connects all your offices with minimum cost.
+  - Solve problem by suggesting appropriate data structures.
 
 ---
 
@@ -88,7 +88,7 @@
 
 ---
 
-Assignment : 9
+# Assignment : 9
 
 > Language : JAVA
 
@@ -96,8 +96,9 @@ Assignment : 9
 
 ---
 
-Assignment : 10
+# Assignment : 10
 
 > Language : C++
 
 - File handling operations in C++.
+- Statements from university: ![Screenshot of statements from university:](./img/assign10.png)
