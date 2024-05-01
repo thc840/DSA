@@ -3,7 +3,7 @@ def linearProbing(table, size, key):
     pos = key % size
     if(table[pos] == -1):
         table[pos] = key
-        print("LP: ",key, " is added at position ", pos, "\n")
+        print("LP: ",key, " is added at position ", pos)
     else:
         while(table[pos] != -1):
             if (pos < size):
@@ -14,7 +14,7 @@ def linearProbing(table, size, key):
                 break
         table[pos] = key
         print("Collision Occured:", collisions, end = " ")
-        print("LP: ",key, " is added at position ", pos, "\n")
+        print("LP: ",key, " is added at position ", pos)
     return collisions
 
 #----------------------------------------------------#
@@ -27,7 +27,7 @@ def quadraticProbing(table, size, key):
         table[pos] = key
         print("QP: ", key, " is added at position ", pos, "\n")
     else:
-        while(table[pos] != -1):
+        while(table[pos] != -1 and i <= size):
             collisions += 1
             if (pos < size):
                 pos = (pos + (i ** 2)) % size #Quadratic Probing
@@ -35,9 +35,14 @@ def quadraticProbing(table, size, key):
             else:
                 print("Table is full!")
                 break
-        table[pos] = key
-        print("Collision Occured:", collisions, end = " ")
-        print("QP: ",key, " is added at position ", pos, "\n")
+
+        if(i > size):
+            print("QP: Error: It is taking too much time to insert the key.")
+            return collisions
+        else:
+            table[pos] = key
+            print("Collision Occured:", collisions, end = " ")
+            print("QP: ",key, " is added at position ", pos, "\n")
     return collisions
 
 #----------------------------------------------------#
